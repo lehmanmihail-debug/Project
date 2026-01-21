@@ -1,5 +1,5 @@
 # Создатель Git
-https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Linus_Torvalds_%2528cropped%2529.jpg/220px-Linus_Torvalds_%2528cropped%2529.jpg
+![Линус Торвальдс](/GitHistory/Linus.jpg)
 
 Линус Бенедикт Торвальдс (род. 28 декабря 1969)
 Финно-американский программист, создатель ядра Linux и системы контроля версий Git
