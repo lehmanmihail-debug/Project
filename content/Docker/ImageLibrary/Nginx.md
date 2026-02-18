@@ -1,61 +1,312 @@
-## Веб-сервер Nginx
+## Практическая работа на примере готового образа Nginx в Docker
 
-Скачать и запустить Nginx
+> **Nginx** - это легкий и небольшой веб-сервер
+
+### Проверить Docker
+
+Получить версию установленного у вас Docker
 ```shell
-docker run -d --name my-nginx -p 80:80 nginx:alpine
+docker version
 ```
 
+![Скрин версии Docker](img/docker_version.png)
+
+> Готовые образы берутся из сторонних источников: **Docker Hub** или другие
+
+[Ссылка на Docker Hub](https://hub.docker.com/)
+
+### Подготовка Docker (чтобы начать работать с "чистого листа")
+
+1. Остановить все запущенные контейнеры
+1. Удалить все остановленные контейнеры
+1. Удалить все неиспользуемые образы
+
+- Следует убедиться, нет ли у вас уже установленных и запущенных контейнеров:
 ```shell
-curl http://localhost
+docker ps -a
+```
+- Если есть, то лучше их остановить:
+```shell
+docker stop $(docker ps -q)
+```
+- Если остановленные контейнеры не нужно, то удалить их:
+```shell
+docker container prune
+```
+или
+```shell
+docker container prune $(docker ps -q)
+```
+- Ещё раз убедиться, что нет лишних контейнеров:
+```shell
+docker ps -a
 ```
 
-[Проверить в браузере: http://localhost](http://localhost)
+![Тут нужен скриншот вывода]()
 
-### Полезные команды для работы
-
-#### Посмотреть запущенные контейнеры
+- Опционально можно удалить ненужные образы. Показать текущие образы:
 ```shell
-docker ps
+docker images
+```
+Удалить все ненужные образы
+```shell
+docker image prune -a
+```
+или
+```shell
+docker rmi $(docker images -q)
 ```
 
-#### Остановить контейнер
+> Удалять нужно только учебные контейнеры и образы, т.к. есть риск потерять важные данные, которые могут содержаться в контейнерах!
+
+### Получение готового образа Nginx
+
+Найти нужный образ на **Docker Hub**
+```shell
+docker search nginx
+```
+
+![Скрин вывода поиска по слову nginx](img/docker_screen.png)
+
+Получить, установить и запустить Nginx
+```shell
+docker run -d --name my-nginx -p 80:80 nginx
+```
+
+Если запуск контейнера не удался, то проверьте уже созданные контейнеры с таким именем у себя
+```shell
+docker ps -a
+```
+
+Показать загруженный на ваш компьютер образ
+```shell
+docker images
+```
+
+При необходимости остановить контейнер с таким именем:
 ```shell
 docker stop my-nginx
 ```
-
-#### Запустить остановленный
+Перезапустить контейнер по имени
 ```shell
-docker start my-nginx
+docker restart my-nginx
+```
+Перезапустить контейнер по его **id**
+```shell
+docker restart 2e6c42d9b6af
 ```
 
-#### Удалить контейнер
+Удалить выбранный контейнер по его имени
 ```shell
 docker rm my-nginx
 ```
 
-#### Удалить контейнер и его volume
+![Тут нужен скриншот вывода]()
+
+И можно удалить ещё и образ загруженного ранее Nginx:
+
+Получить id образа
 ```shell
-docker rm -v my-nginx
+docker images
 ```
 
-#### Посмотреть логи
+Удалить по `id` нужный образ
+```shell
+docker rmi 062a783918fb
+```
+
+![Скрин состояния docker images](img/rm_image.png)
+
+### Проверить работу контейнера
+
+Можно снова установить и запустить Nginx
+```shell
+docker run -d --name my-nginx -p 80:80 nginx
+```
+
+Показать наличие загруженного файла образа
+```shell
+docker images
+```
+
+![Скрин образа](img/2_images.png)
+
+Показать только запущенные контейнеры
+```shell
+docker ps
+```
+или показать все контейнеры (в т.ч. остановленные)
+```shell
+docker ps -a
+```
+![Скрин контейнера](img/contaurer.png)
+
+> Из одного образа можно получить несколько контейнеров!
+
+Показать работающий Nginx
+
+Способ 1
+```shell
+curl http://localhost/
+```
+
+![Скрин вывода curl](img/curl_nginx.png)
+
+Способ 2 - [открыть http://localhost/ адрес в браузере](http://localhost/)
+
+![Скрин nginx в браузере](img/web_nginx.png)
+
+### Управление контейнером
+
+#### Мониторинг контейнеров
+
+Показать состояние всех контейнеров
+```shell
+docker ps -a
+```
+
+Показать подробности о контейнере
+```shell
+docker inspect my-nginx
+```
+
+Запустить мониторинг контейнеров
+```shell
+docker stats
+```
+
+![](img/2_stats.png)
+
+
+> Выйти из мониторинга контейнеров можно по `Ctrl-C`
+
+Получить лог контейнера
 ```shell
 docker logs my-nginx
 ```
+
+Показать логи в режиме ожидания
 ```shell
-docker logs -f my-nginx  # в реальном времени
+docker logs -f my-nginx
 ```
-# Войти в контейнер
+> Выйти из логов в режиме ожидания можно по `Ctrl-C`
+
+![](img/logs.png)
+
+### Управление контейнером
+
+Остановить контейнер
+```shell
+docker stop my-nginx
+```
+
+Снова запустить контейнер
+```shell
+docker start my-nginx
+```
+
+Перезапустить контейнер
+```shell
+docker restart my-nginx
+```
+
+Зайти в контейнер
+```shell
+docker exec -it my-nginx /bin/bash
+```
+или
+```shell
+docker exec -it my-nginx bash
+```
+или
 ```shell
 docker exec -it my-nginx /bin/sh
 ```
-
-# Скопировать файл из контейнера
+или
 ```shell
-docker cp my-nginx:/etc/nginx/nginx.conf ./nginx.conf
+docker exec -it my-nginx sh
 ```
 
-# Посмотреть статистику
+внутри контейнера можно повыполнять некоторые команды Linux
+Получить информацию об ОС контейнера
 ```shell
-docker stats
+uname -a
+```
+![](img/uname.png)
+
+Получить больше информации об ОС контейнера
+```shell
+cat /etc/os-release
+```
+![](img/os_release.png)
+
+Установить **Fastfetch**
+```shell
+apt update && apt install -y fastfetch
+```
+> apt update - обновит списки источников приложений, apt install - установит указанное приложение
+Запустить **Fastfetch**
+```shell
+fastfetch
+```
+![Вывод команды fastfetch](img/fastfetch.png)
+
+Можно установить ещё несколько приложений внутри Docker-контейнера:
+```shell
+apt update && apt install -y htop cmatrix hollywood mc micro
+```
+> На все вопросы ответьте `1` и `Enter`
+
+и позапускать их отдельно друг от друга:
+```shell
+htop
+```
+
+![Скрин вывода htop]()
+
+> Выйти из `htop` можно по **Q**
+
+```shell
+cmatrix
+```
+
+![Скрин вывода cmatrix]()
+
+> Выйти из `cmatrix` можно по **Q**
+
+```shell
+hollywood
+```
+![Скрин вывода hollywood]()
+
+> Выйти из `hollywood` можно по `Ctrl-C`
+
+Выйти из контейнера можно командой `exit`
+
+Отредактировать текст страницы приветствия Nginx (Находится в разработке!)
+
+Открыть файл `index.html` для редактирования содержимого
+```shell
+micro /usr/local/apache2/htdocs/index.html
+```
+
+отредайтируйте и сохраните по `Ctrl+S` и выйти из режима редактирования по `Ctrl+Q`
+
+[Проверить изменения на открытой странице >>](http://localhost/)
+
+![Скрин изменённой страницы в браузере](img/)
+
+Остановить все запущенные контейнеры
+```shell
+docker stop $(docker ps -q)
+```
+
+Удалить все остановленные контейнеры
+```shell
+docker container prune $(docker ps -q)
+```
+
+Удалить все образы
+```shell
+docker rmi $(docker images -q)
 ```
