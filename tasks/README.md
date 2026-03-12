@@ -6,11 +6,12 @@ docker run -d --name my-apache -p 8081:80 httpd
 
 ## Редактирование веб-страницы
 ### Зайти в контейнер:
-docker exec -it my-apache bash    
+docker exec -it my-apache bash  
+
+![dockerexec](/tasks/dockerexec.jpg)  
+
 ### Открыть файл index.html для редактирования содержимого:
  micro /usr/local/apache2/htdocs/index.html    
-
-![dockerexec](/tasks/dockerexec.jpg)
 
 ![dockerapch](/tasks/apch.jpg)
 
