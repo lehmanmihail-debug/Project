@@ -58,4 +58,9 @@ docker run --rm cpp-hello
 ```shell
 docker run -it --entrypoint sh cpp-hello
 ```
+выйти из контейнера:
+```shell
+exit
+```
 
+> Если вы обнаружили ошибку в этом тексте - сообщите пожалуйста автору!
