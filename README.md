@@ -7,12 +7,14 @@
 - [Markdown](/content/Markdown.md)
 - [Mermaid](/content/Mermaid/README.md)
 - [Docker](/content/Docker/README.md)
+- [DevOps](/content/DevOps/README.md)
 - [Практические задания](/content/StudentPracticalsLabs/README.md)
-- [Инструментальные средства разработки ПО](/content/SoftwareDevelopmentTools/README.md)
-- [Информационные технологии](/content/IT/README.md)
-- [Основы проектирования баз данных](/content/Basics_database_design/README.md)
-- [Обеспечение качества функционирования компьютерных систем](/content/Ensuring_quality_computer_systems_functioning/README.md)
-- [Поддержка и тестирование программных модулей](/content/SupportAndTesting_of_software_modules/)
+- Предметы:
+    - [Инструментальные средства разработки ПО](/content/SoftwareDevelopmentTools/README.md)
+    - [Информационные технологии](/content/IT/README.md)
+    - [Основы проектирования баз данных](/content/Basics_database_design/README.md)
+    - [Обеспечение качества функционирования компьютерных систем](/content/Ensuring_quality_computer_systems_functioning/README.md)
+    - [Поддержка и тестирование программных модулей](/content/SupportAndTesting_of_software_modules/)
 
 ---
 
