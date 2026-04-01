@@ -10,11 +10,13 @@
 
 в **Windows Powershell**
 ```shell
-docker run -d
-  --name my-mongo
-  -p 27017:27017
+docker run -d `
+  --name my-mongo `
+  -p 27017:27017 `
   mongo:latest
 ```
+
+> Если эта команда в Powershell не работает, то удалите из кода апострофы `
 
 в **Git-Bash/Linux/WSL 2.0/Mac**
 ```shell

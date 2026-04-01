@@ -14,12 +14,14 @@ echo "Hello from HTTP server" > test.txt
 
 в **Windows Powershell**
 ```shell
-docker run -d
-  --name http-server
-  -p 8082:80
-  -v $(pwd):/usr/share/nginx/html
+docker run -d `
+  --name http-server `
+  -p 8082:80 `
+  -v ${PWD}:/usr/share/nginx/html `
   nginx:alpine
 ```
+
+> Если эта команда в Powershell не работает, то удалите из кода апострофы `
 
 в **Git-Bash/Linux/WSL 2.0/Mac**
 ```shell

@@ -8,11 +8,13 @@
 
 в **Windows Powershell**
 ```shell
-docker run -d
-  --name squid-proxy
-  -p 3128:3128
+docker run -d `
+  --name squid-proxy `
+  -p 3128:3128 `
   ubuntu/squid:latest
 ```
+
+> Если эта команда в Powershell не работает, то удалите из кода апострофы `
 
 в **Git-Bash/Linux/WSL 2.0/Mac**
 ```shell
