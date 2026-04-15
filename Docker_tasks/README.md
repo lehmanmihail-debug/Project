@@ -10,7 +10,7 @@
 ### 10. [Jira](./Jira/README.md)
 ### 11. [Pcb2gcode](./Pcb2gcode/README.md)
 ### 12. [Статический сайт на Apache](./StatApache/README.md)
-### 13. [](.//README.md)
+### 13. [Ubuntu](./Ubuntu/README.md)
 ### 14. [](.//README.md)
 ### 15. [](.//README.md)
 ### 16. [](.//README.md)
