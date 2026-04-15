@@ -7,7 +7,7 @@
 ### 7. [PostgeSQL](./postgreSQL/README.md)
 ### 8. [MongoDB (NoSQL)](./MongoDB/README.md)
 ### 9. [Adminer](./Adminer/README.md)
-### 10. [](.//README.md)
+### 10. [Jira](./Jira/README.md)
 ### 11. [](.//README.md)
 ### 12. [](.//README.md)
 ### 13. [](.//README.md)
