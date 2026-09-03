@@ -10,7 +10,7 @@
 * `Step` (Шаг): Конкретная команда внутри задачи, например, npm install.
 * `Runner`: Это виртуальная машина, которая выполняет ваши задачи. GitHub предоставляет её бесплатно.
 
-#### Pipeline
+#### Pipeline-ы
 
 - [Pipeline-ы](/content/DevOps/CI_CD/README.md)
 

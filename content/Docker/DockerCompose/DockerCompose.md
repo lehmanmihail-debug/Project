@@ -89,38 +89,52 @@ volumes:
 ## 🚀 Основные команды
 
 ### Запуск и управление:
-```bash
-# Запуск всех сервисов в фоне
+
+Показать все имеющиеся Docker Compose проекты:
+```shell
+docker compose ls
+```
+Запуск всех сервисов в фоне
+```shell
 docker compose up -d
-
-# Остановка всех сервисов
+```
+Остановка всех сервисов
+```shell
 docker compose down
-
-# Просмотр статуса
+```
+Просмотр статуса
+```shell
 docker compose ps
-
-# Просмотр логов
+```
+Просмотр логов
+```shell
 docker compose logs
-
-# Перезапуск сервисов
+```
+Перезапуск сервисов
+```shell
 docker compose restart
-
-# Выполнение команды в сервисе
+```
+Выполнение команды в сервисе
+```shell
 docker compose exec db psql -U user myapp
 ```
 
 ### Разработка и отладка:
-```bash
-# Просмотр конфигурации
+
+Просмотр конфигурации
+```shell
 docker compose config
-
-# Сборка образов
+```
+Сборка образов
+```shell
 docker compose build
-
-# Запуск одного сервиса
+```
+Запуск одного сервиса
+```shell
 docker compose up web
-
-# Просмотр логов в реальном времени
+```
+Просмотр логов в реальном времени
+```shell
 docker compose logs -f web
 ```
 
