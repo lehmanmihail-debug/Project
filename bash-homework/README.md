@@ -20,7 +20,8 @@ bash-homework/
 
 ## Все скрипты запускаются командой:
 bash
-sh script_name.sh
+        
+        sh script_name.sh
 
 ## Примеры запуска:
 ## 1. Приветствие
