@@ -23,44 +23,62 @@ bash
 sh script_name.sh
 
 ## Примеры запуска:
-### 1. Приветствие
-bash
+## 1. Приветствие
+
+![alt text](image.png)
+
+
         
-        sh 01-hello.sh
-### 2. Калькулятор суммы
-bash
+    bash sh 01-hello.sh
+#
+## 2. Калькулятор суммы
+
+![alt text](image-1.png)
+
         
-        sh 02-sum.sh
-### 3. Проверка четности
-bash
+    bash sh 02-sum.sh
+#
+## 3. Проверка четности
+
+![alt text](image-2.png)
         
-        sh 03-even-odd.sh
-### 4. Создание структуры проекта
-bash
+    bash 03-even-odd.sh
+#
+## 4. Создание структуры проекта
+
+![alt text](image-3.png)
         
-        sh 04-project-creator.sh
-### 5. Счетчик строк в файле
-bash
+    bash 04-project-creator.sh
+#
+## 5. Счетчик строк в файле
+
+![alt text](image-4.png)
         
-        sh 05-line-counter.sh
-### 6. Генератор паролей
-bash
+    bash 05-line-counter.sh
+#
+## 6. Генератор паролей
+
+![alt text](image-5.png)
         
-        sh 06-password-generator.sh
+    bash 06-password-generator.sh
 ### или с указанием длины
         
-        sh 06-password-generator.sh 12
-### 7. Поиск файлов по расширению
-bash
+    bash 06-password-generator.sh 12
+#
+## 7. Поиск файлов по расширению
+
+![alt text](image-6.png)
         
-        sh 07-file-finder.sh
-### 8. Анализатор GitHub репозиториев
-bash
+    bash 07-file-finder.sh
+#
+## 8. Анализатор GitHub репозиториев
+
+![alt text](image-7.png)
         
-        sh 08-github-stats.sh tensorflow/tensorflow
+    bash 08-github-stats.sh tensorflow/tensorflow
 
 ---
-        sh 08-github-stats.sh microsoft/vscode
+    bash 08-github-stats.sh microsoft/vscode
 
 ---  
-        sh 08-github-stats.sh nodejs/node
+    bash 08-github-stats.sh nodejs/node
