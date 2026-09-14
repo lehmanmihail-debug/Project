@@ -1,3 +1,4 @@
+```mermaid 
 erDiagram
 	blog_posts }o--|| users : references
 	comments }o--|| blog_posts : references
@@ -37,3 +38,4 @@ erDiagram
 		INT blog_id
 		INT tag_id
 	}
+```
