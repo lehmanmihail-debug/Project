@@ -1,63 +1,50 @@
-Table students [headercolor: #ff4f81] {
-	id int [ pk, increment, not null, unique ]
-	first_name varchar(255)
-	last_name varchar(255)
-	email varchar(255)
-	phone varchar(255)
-	address varchar(255)
-	dob date
-	major_id int
-}
+erDiagram
+    enrollment }o--|| students : "references"
+    enrollment }o--|| courses : "references"
+    instructors ||--|| departments : "references"
+    courses ||--|| departments : "references"
+    students }o--|| major : "references"
 
-Table courses [headercolor: #bc49c4] {
-	id int [ pk, increment, not null, unique ]
-	name varchar(255)
-	dep_id int
-	credits int
-}
+    students {
+        INT id
+        VARCHAR first_name
+        VARCHAR last_name
+        VARCHAR email
+        VARCHAR phone
+        VARCHAR address
+        DATE dob
+        INT major_id
+    }
 
-Table enrollment [headercolor: #7c4af0] {
-	id int [ pk, increment, not null, unique ]
-	course_id int
-	student_id int
-	term varchar(255)
-}
+    courses {
+        INT id
+        VARCHAR name
+        INT dep_id
+        INT credits
+    }
 
-Table instructors [headercolor: #7d9dff] {
-	id int [ pk, increment, not null, unique ]
-	first_name varchar(255)
-	last_name varchar(255)
-	email varchar(255)
-	dep_id int
-}
+    enrollment {
+        INT id
+        INT course_id
+        INT student_id
+        VARCHAR term
+    }
 
-Table departments [headercolor: #32c9b0] {
-	id int [ pk, increment, not null, unique ]
-	name varchar(255)
-	chairperson int
-}
+    instructors {
+        INT id
+        VARCHAR first_name
+        VARCHAR last_name
+        VARCHAR email
+        INT dep_id
+    }
 
-Table major [headercolor: #ffe159] {
-	id int [ pk, increment, not null, unique ]
-	name varchar(255)
-}
+    departments {
+        INT id
+        VARCHAR name
+        INT chairperson
+    }
 
-Ref enrollment_student_id_fk {
-	enrollment.student_id > students.id [ delete: no action, update: no action ]
-}
-
-Ref enrollment_course_id_fk {
-	enrollment.course_id > courses.id [ delete: no action, update: no action ]
-}
-
-Ref instructors_dep_id_fk {
-	instructors.dep_id - departments.id [ delete: no action, update: no action ]
-}
-
-Ref courses_dep_id_fk {
-	courses.dep_id - departments.id [ delete: no action, update: no action ]
-}
-
-Ref students_major_id_fk {
-	students.major_id > major.id [ delete: no action, update: no action ]
-}
+    major {
+        INT id
+        VARCHAR name
+    }
