@@ -1,3 +1,5 @@
+
+``` mermaid
 erDiagram
     enrollment }o--|| students : "references"
     enrollment }o--|| courses : "references"
@@ -48,3 +50,4 @@ erDiagram
         INT id
         VARCHAR name
     }
+```
