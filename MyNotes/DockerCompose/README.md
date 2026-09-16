@@ -3,3 +3,6 @@
 - [PostgreSQL/README.md](./PostgreSQL/README.md)
 - [PostgreSQL+pgAdmin/README.md](./PostgreSQL+pgAdmin/README.md)
 - [drawDB/README.md](./drawDB/README.md)
+- [LibreDB_Studio/README.md](./LibreDB_Studio/README.md)
+- [Homehub/README.md](./Homehub/README.md)
+- [CloudBeaver/README.md](./CloudBeaver/README.md)
