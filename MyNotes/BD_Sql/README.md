@@ -307,6 +307,7 @@ USE shop;
 SHOW TABLES;
 SELECT * FROM products1;
 SELECT * FROM products2;
+```
 
 ![alt text](image-21.png)
 
