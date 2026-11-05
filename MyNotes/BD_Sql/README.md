@@ -315,3 +315,8 @@ SELECT * FROM products2;
 
 ![alt text](image-23.png)
 
+## General log
+
+![alt text](image-24.png)
+
+![alt text](image-25.png)

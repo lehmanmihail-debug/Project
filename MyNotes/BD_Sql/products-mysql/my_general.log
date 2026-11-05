@@ -1,0 +1,4 @@
+/usr/sbin/mysqld, Version: 26.10.0 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2026-11-05T07:25:10.404682Z	   10 Quit	
