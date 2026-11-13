@@ -7,6 +7,7 @@
 - [Основы проектирования баз данных](/content/Courses/Basics_database_design/content/Begin.md)
 - [Классификация Баз Данных](/content/Courses/Basics_database_design/content/All_db.md)
 - [ER-диаграмы](/content/Courses/Basics_database_design/content/ER_dia.md)
+- [«Команды» и «запросы» в SQL: в чём разница](/content/Courses/Basics_database_design/content/Docs/Command_or_request.md)
 - [Алиасы в SQL](/content/Courses/Basics_database_design/content/Docs/Aliases.md)
 - [Дамп БД](/content/Courses/Basics_database_design/content/Docs/dump.md)
 - [Оператор `IN` в SQL](/content/Courses/Basics_database_design/content/Docs/IN.md)
@@ -19,20 +20,32 @@
 - [Лог MySQL](/content/Courses/Basics_database_design/content/Docs/log.md)
 - [Основные движки MySQL и их назначение](/content/Courses/Basics_database_design/content/Docs/storage_engine.md)
 - [Краткий обзор движков таблиц MySQL](https://habr.com/ru/articles/64851/)
+- [Индексы](/content/Courses/Basics_database_design/content/Docs/Index.md)
+- [Транзакции]()
+- [Подзапросы]()
+- [Управление пользователями и правами]()
+- [Резервное копирование и восстановление]()
+- [Безопасность БД]()
 
 
 ### Практика
 
 - Docker
-  - [Подробные уроки по Docker для начинающих](https://gitflic.ru/project/rurewa/altlinux/blob?file=content%2FDocker%2FDocker.md&branch=master&mode=markdown)
-  - [Работа с базой данных внутри контейнера](/content/Basics_database_design/db_base.md)
+  - [Docker для начинающих](/content/Docker/getDocker.md)
+  - [Шпаркагла по Docker](/content/Docker/DockerReminder.md)
 - Базы Данных
   - [Интерактивная работа с MySQL в изолированном окружении Docker № 1](/content/Courses/Basics_database_design/content/bd/Begin_MySQL_1.md)
   - [Интерактивная работа с MySQL в изолированном окружении Docker № 2](/content/Courses/Basics_database_design/content/bd/Begin_MySQL_2.md)
   - [Основные операции на примере двух таблиц «products 1» и «products 2»](/content/Courses/Basics_database_design/content/bd/Products.md)
   - [Руководство по представлениям (VIEW) в MySQL](/content/Courses/Basics_database_design/content/bd/VIEW_MySQL.md)
-  - [Нормализация данных. Практическое руководство 1](/content/Courses/Basics_database_design/content/bd/Normalization_1.md)
-  - [Лабораторная работа по нормализации данных в БД - 2](/content/Courses/Basics_database_design/content/bd/Normalization_2.md)
+  - [Лабораторная # 1 работа по нормализации данных в БД (с ведением лога)](/content/Courses/Basics_database_design/content/bd/Normalization_1.md)
+  - [Лабораторная # 2 работа по нормализации данных в БД (с ведением лога)](/content/Courses/Basics_database_design/content/bd/Normalization_2.md)
+  - [Лабораторная # 3 работа по нормализации данных в БД (с ведением лога)](/content/Courses/Basics_database_design/content/bd/Normalization_3.md)
+  - [Лабораторная # 4 работа по нормализации данных в БД (с ведением лога)](/content/Courses/Basics_database_design/content/bd/Normalization_4.md)
+  - [Лабораторная # 5 работа по нормализации данных в БД (с ведением лога)](/content/Courses/Basics_database_design/content/bd/Normalization_5.md)
+  - [Лабораторная работа по Алиасам в MySQL](/content/Courses/Basics_database_design/content/bd/Aliases.md)
+
+После освоения базовых операций SQL, представлению View и нормализации таблиц, что ещё надо освоить в Базах данных?
 
 ***
 
