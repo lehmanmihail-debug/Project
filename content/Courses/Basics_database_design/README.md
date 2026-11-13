@@ -33,6 +33,10 @@
 - Docker
   - [Docker для начинающих](/content/Docker/getDocker.md)
   - [Шпаркагла по Docker](/content/Docker/DockerReminder.md)
+<<<<<<< HEAD
+=======
+  - [Работа с базой данных внутри контейнера](/content/Basics_database_design/db_base.md)
+>>>>>>> a93a95fe0c2fa6dad39d60f08e5a1056781f9719
 - Базы Данных
   - [Интерактивная работа с MySQL в изолированном окружении Docker № 1](/content/Courses/Basics_database_design/content/bd/Begin_MySQL_1.md)
   - [Интерактивная работа с MySQL в изолированном окружении Docker № 2](/content/Courses/Basics_database_design/content/bd/Begin_MySQL_2.md)
