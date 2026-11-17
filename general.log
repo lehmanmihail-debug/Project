@@ -1,0 +1,5 @@
+/usr/sbin/mysqld, Version: 8.0.46 (MySQL Community Server - GPL). started with:
+Tcp port: 3306  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2026-11-17T09:10:56.326899Z	   16 Query	SET GLOBAL general_log = 'ON'
+2026-11-17T09:10:56.327205Z	   16 Quit	
